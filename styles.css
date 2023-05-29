@@ -9,36 +9,61 @@ body {
 }
 
 header {
-    background-color:darkslategrey;
+    background-color: rgb(247, 172, 73);
     padding: 20px;
     text-align: left;
 }
 
-form {
+#add-button{
+    background-color: rgb(247, 172, 73);
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+#body-input,
+#title-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  overflow-y: auto;
+  max-height: 100px;
+}
+
+#reminder-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#reminder-div {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 20px;
 }
 
-input[type="text"] {
-    padding: 5px;
-    margin-right: 10px;
-}
-
-button {
-    padding: 5px 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {   
+#reminder-form input[type="text"],
+#reminder-form label {
     margin-bottom: 10px;
-    display: flex;
-    align-items: center; 
 }
 
-li span {
-    margin-right: 10px;
+#calendar-container {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9999; /* Ensures the calendar is on top of other elements */
 }
 
+#calendar-container.visible {
+    display: block;
+}

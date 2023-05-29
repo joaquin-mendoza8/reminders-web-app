@@ -1,9 +1,8 @@
 <!--- 
-    client-ui.html - Client UI for Reminders application that implements the
-    UI for the Reminders application.  This is the main page that is loaded
-    when the user accesses the application.  It is responsible for loading
-    the client-side JavaScript and CSS files, and for loading the initial
-    page content.
+    index.html - Implements the UI for the Reminders application.  
+    This is the main page that is loaded when the user accesses the 
+    application.  It is responsible for loading the client-side JavaScript 
+    and CSS files, and for loading the initial page content.
 -->
 
 
@@ -19,8 +18,20 @@
         </header>
         <main>
             <form id="reminder-form"> <!--- form for adding reminders -->
-                <input type="text" id="reminder-input" placeholder="Enter a reminder">
-                <button type="submit">Add</button>
+                <div id="reminder-div">    
+                    <h3>Add Reminder</h3>
+                    <div>
+                        <input type="text" id="title-input" placeholder="Title">
+                    </div>
+                    <div>
+                        <input type="text" id="body-input" placeholder="Body">
+                    </div>
+                    <div>
+                        <button id="calendar-button">Select Date</button>
+                        <div id="calendar-container"></div>
+                        <button id="add-button">Add</button>
+                    </div>
+                </div>
             </form>
             <ul id="reminders-list"></ul> <!--- list of reminders -->
         </main>
